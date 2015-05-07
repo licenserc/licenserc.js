@@ -34,6 +34,6 @@ try {
 	typeof e; // => 'object'
 }
 
-licenserc.implementationVersion; // => '0.0.0-prerelease'
+licenserc.implementationVersion; // => '0.1.0'
 licenserc.specificationVersion; // => '0.0.0-prerelease'
 ```
