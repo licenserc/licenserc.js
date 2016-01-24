@@ -14,16 +14,14 @@ var rules = licenserc([
   '',
   'use: (MIT OR GPL-1.0+)',
   // Only this last "link" rule applies.
-  'link: (MIT OR ISC OR Apache-2.0)'
-].join('\n'))
+  'link: (MIT OR ISC OR Apache-2.0)' ]
+  .join('\n'))
 
 assert(rules.link('MIT'))
 assert(!rules.link('GPL-3.0'))
 assert.throws(
   function() {
-    rules.link('Invalid License Identifier')
-  }
-)
+    rules.link('Invalid License Identifier') })
 
 assert.equal(licenserc.implementationVersion, '0.1.0')
 assert.equal(licenserc.specificationVersion, '0.0.0-prerelease')
