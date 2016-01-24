@@ -11,9 +11,11 @@ var allowAnyLicense = function() {
   return true }
 
 module.exports = function(fileContent) {
-  var returned = { }
-  uses.forEach(function(use) {
-    returned[use] = allowAnyLicense })
+  var returned = uses.reduce(
+    function(returned, use) {
+      returned[use] = allowAnyLicense
+      return returned },
+    { })
   fileContent
     .split(endOfLine)
     .forEach(function(line) {
