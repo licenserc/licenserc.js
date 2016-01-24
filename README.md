@@ -1,6 +1,6 @@
 Check project licenses against [.licenserc](http://licenserc.org) rules.
 
-```js
+```javascript
 var licenserc = require('licenserc')
 var assert = require('assert')
 
