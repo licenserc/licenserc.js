@@ -8,7 +8,9 @@
     "spdx": "^0.4.0"
   },
   "devDependencies": {
-    "jsmd": "^0.3.0"
+    "defence-cli": "^1.0.5",
+    "jsmd": "^0.3.0",
+    "replace-require-self": "^1.1.0"
   },
   "homepage": "https://licenserc.org",
   "keywords": [
@@ -23,6 +25,6 @@
   "main": "source/licenserc.js",
   "repository": "licenserc/licenserc.js",
   "scripts": {
-    "test": "jsmd README.md"
+    "test": "defence README.md | replace-require-self | node"
   }
 }
