@@ -12,6 +12,12 @@
     "jsmd": "^0.3.0",
     "replace-require-self": "^1.1.0"
   },
+  "files": [
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "index.js"
+  ],
   "homepage": "https://licenserc.org",
   "keywords": [
     "SPDX",
