@@ -17,8 +17,8 @@ var rules = licenserc([
   'link: (MIT OR ISC OR Apache-2.0)'
 ].join('\n'));
 
-rules.link('MIT'); // => true
-rules.link('GPL-3.0'); // => false
+assert(rules.link('MIT'))
+assert(!rules.link('GPL-3.0'))
 assert.throws(
   function() {
     rules.link('Invalid License Identifier');
