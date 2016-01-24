@@ -1,7 +1,7 @@
 {
   "name": "licenserc",
   "description": "check project licenses against .licenserc rules",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "bin": "licenserc",
   "bugs": "https://github.com/licenserc/licenserc.js/issues",
