@@ -31,6 +31,3 @@ module.exports = function(fileContent) {
         else {
           throw new Error('Invalid line: "' + line + '"') } } })
   return returned }
-
-module.exports.implementationVersion = '0.1.0'
-module.exports.specificationVersion = '0.0.0-prerelease'
