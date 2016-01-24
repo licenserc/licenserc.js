@@ -1,4 +1,4 @@
-var spdx = require('spdx');
+var satisfies = require('spdx-satisfies');
 
 var uses = ['use', 'link', 'modify'];
 
@@ -31,7 +31,7 @@ module.exports = function(fileContent) {
             throw new Error('Invalid use, "' + use + '"');
           }
           returned[use] = function(argument) {
-            return spdx.satisfies(argument, expression);
+            return satisfies(argument, expression);
           };
         } else {
           throw new Error('Invalid line: "' + line + '"');
