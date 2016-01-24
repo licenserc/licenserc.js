@@ -1,5 +1,15 @@
 Check project licenses against [.licenserc](http://licenserc.org) rules.
 
+# Command Line
+
+```bash
+cd your-package
+npm install
+licenserc
+```
+
+# JavaScript Module
+
 ```javascript
 var licenserc = require('licenserc')
 var assert = require('assert')

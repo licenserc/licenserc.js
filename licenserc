@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+var cwd = process.cwd()
+var fs = require('fs')
+var path = require('path')
+
+var rules = require('./')(
+  fs.readFileSync(path.join(cwd, '.licenserc'))
+    .toString())
+
+require('read-installed')(
+  process.cwd(),
+  { dev: false },
+  function(error, data) {
+    if (error) {
+      process.stderr.write(error.toString())
+      process.exit(1)}
+    else {
+      process.exit(recurse(data) ? 0 : 1) } })
+
+function recurse(data) {
+  var allValid = true
+  var dependencies = data.dependencies
+  Object.keys(dependencies).forEach(function(name) {
+    var data = dependencies[name]
+    var message = ( 'Link\t' + data.name + '\t' + data.license )
+    var ok
+    try {
+      ok = rules.link(data.license) }
+    catch (error) {
+      ok = false }
+    if (ok) {
+      process.stdout.write(message + '\tOK\n') }
+    else {
+      process.stdout.write(message + '\tNOT OK\n')
+      allValid = false } })
+  return allValid }
