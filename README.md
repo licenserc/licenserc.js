@@ -1,6 +1,3 @@
-licenserc.js
-============
-
 Check project licenses against [.licenserc](http://licenserc.org) rules.
 
 ```js
