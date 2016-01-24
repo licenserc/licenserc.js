@@ -22,7 +22,6 @@
     "package"
   ],
   "license": "Apache-2.0",
-  "main": "source/licenserc.js",
   "repository": "licenserc/licenserc.js",
   "scripts": {
     "test": "defence README.md | replace-require-self | node"
